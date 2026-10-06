@@ -1,0 +1,8 @@
+2026-10-05 10:00:01 INFO Application started successfully
+2026-10-05 10:01:12 INFO User login successful
+2026-10-05 10:02:30 WARNING High memory usage detected
+2026-10-05 10:03:15 ERROR Database connection failed
+2026-10-05 10:03:20 ERROR Database connection failed
+2026-10-05 10:04:01 INFO Database connection restored
+2026-10-05 10:05:10 CRITICAL Server unavailable
+2026-10-05 10:06:22 INFO Server restarted

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Log Monitoring Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>Cloud Log Monitoring Dashboard</h1>
+
+        <p class="subtitle">
+            Cloud Log Monitoring and Failure Detection System
+        </p>
+
+
+        <!-- Add New Log -->
+
+        <h2>Add New Log</h2>
+
+        <div class="log-form">
+
+            <input
+                type="text"
+                id="newLog"
+                placeholder="Example: Database connection failed"
+            >
+
+            <button onclick="submitLog()">
+                Analyze Log
+            </button>
+
+        </div>
+
+
+        <!-- Refresh -->
+
+        <button onclick="refreshDashboard()">
+            Refresh Logs
+        </button>
+
+
+        <!-- Statistics -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Logs</h3>
+                <p id="total">0</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Errors</h3>
+                <p id="errors">0</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Warnings</h3>
+                <p id="warnings">0</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Critical</h3>
+                <p id="critical">0</p>
+            </div>
+
+        </div>
+
+
+        <!-- Recent Alerts -->
+
+        <h2>Recent Alerts</h2>
+
+        <div id="alerts"></div>
+
+
+        <!-- Log History -->
+
+        <h2>Log History</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Time</th>
+
+                    <th>Level</th>
+
+                    <th>Message</th>
+
+                    <th>Failure</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="logTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
